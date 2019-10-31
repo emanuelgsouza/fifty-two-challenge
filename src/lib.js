@@ -16,5 +16,6 @@ const generate = (array = [], value = 2, times = 1, initial = 53) => {
 }
 
 module.exports = {
-  generate
+  generate,
+  factoryItem
 }
