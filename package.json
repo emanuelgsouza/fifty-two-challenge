@@ -1,0 +1,11 @@
+{
+  "name": "fifty-two-challenge",
+  "version": "1.0.0",
+  "main": "src/lib.js",
+  "repository": "https://github.com/emanuelgsouza/fifty-two-challenge.git",
+  "author": "Emanuel Souza <emanuelgdesouza@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  }
+}
