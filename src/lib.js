@@ -16,7 +16,7 @@ const factoryWeek = (week, value) => {
  * @param  {Object} options { initialValue: String, weeks: Number }
  * @return {Array<Week>}    [ { week: Number, value: Number } ]
  */
-const generate = (options) => {
+const generate = (options = {}) => {
   const { initialValue = 2, weeks = 52 } = options
 
   return Array.from({ length: weeks }, (_, week) => {
