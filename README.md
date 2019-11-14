@@ -11,8 +11,28 @@ yarn add fifty-two-challenge # npm install fifty-two-challenge
 ```js
 const { generate } = require('fifty-two-challenge')
 
-generate([], 2) // return a array of weeks
+generate({
+  initialValue: 5,
+  weeks: 4
+}) // return a array of weeks
 ```
+
+## API
+
+### generate(options = {})
+
+Generate an array of weeks with corresponding values from each week
+
+#### Arguments
+
+`options`: An object with two fields:
+
+* **initialValue**: initial value to generate data. Default is 2
+* **weeks**: number of weeks. Default is 52
+
+#### Returns
+
+* Array of weeks: the week object is a object with value and week fields
 
 ## Author
 
