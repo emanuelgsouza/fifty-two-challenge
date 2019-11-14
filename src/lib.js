@@ -1,35 +1,30 @@
 /**
- * @method factoryItem
- * @param  {String} week
+ * @method factoryWeek
+ * @param  {Number} week
  * @param  {Number} value
- * @return {Object}       { week, value }
+ * @return {Object}       { week: Number, value: Number }
  */
-const factoryItem = (week, value) => ({
-  week,
-  value
-})
+const factoryWeek = (week, value) => {
+  return {
+    week,
+    value
+  }
+}
 
 /**
- * @method execute
- * @param  {Array} array
- * @param  {Number} value
- * @param  {Number} times
- * @param  {Number} initial
- * @return {Array}
+ * @method generate
+ * @param  {Object} options { initialValue: String, weeks: Number }
+ * @return {Array<Week>}    [ { week: Number, value: Number } ]
  */
-const generate = (array = [], value = 2, times = 1, initial = 53) => {
-  if (times === initial) {
-    return array
-  }
+const generate = (options = {}) => {
+  const { initialValue = 2, weeks = 52 } = options
 
-  array.push(factoryItem(times, value * times))
-
-  times += 1
-
-  return generate(array, value, times)
+  return Array.from({ length: weeks }, (_, week) => {
+    const weekNumber = week + 1
+    return factoryWeek(weekNumber, initialValue * weekNumber)
+  })
 }
 
 module.exports = {
-  generate,
-  factoryItem
+  generate
 }
