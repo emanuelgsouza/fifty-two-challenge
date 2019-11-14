@@ -3,7 +3,8 @@ module.exports = {
     browser: true,
     commonjs: true,
     es6: true,
-    node: true
+    node: true,
+    'jest/globals': true
   },
   extends: [
     'standard'
@@ -15,6 +16,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018
   },
+  plugins: ['jest'],
   rules: {
   }
 }
